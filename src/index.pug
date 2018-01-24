@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title owm
+  body
+    h1 Compass
+    #notice
+    .compass
+      #compassDiscImg.disc
+      .arrow
+    .orientation-data
+    div
+      | Tilt back to front:
+      span#tiltFB
+    div
+      | Tilt left to right:
+      span#tiltLR
+    div
+      | Direction:
+      span#direction
+      #dm-info
+    p
+      | Acceleration: (
+      span#acceleration-x.value 0
+      | ,
+      span#acceleration-y.value 0
+      | ,
+      span#acceleration-z.value 0
+      | ) m/s
+      sup 2
+    p
+      | Acceleration including gravity: (
+      span#acceleration-including-gravity-x.value 0
+      | ,
+      span#acceleration-including-gravity-y.value 0
+      | ,
+      span#acceleration-including-gravity-z.value 0
+      | ) m/s
+      sup 2
+    p
+      | Rotation rate: (
+      span#rotation-rate-beta.value 0
+      | ,
+      span#rotation-rate-gamma.value 0
+      | ,
+      span#rotation-rate-alpha.value 0
+      | )
+    p
+      | Interval:
+      span#interval.value 16
+      |  milliseconds

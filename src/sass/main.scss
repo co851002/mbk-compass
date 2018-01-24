@@ -1,0 +1,75 @@
+// We load the CSS using the ITCSS approach.
+// This helps organizing the project in order to better deal with CSS specificities.
+// All SASS variables goes here.
+// No CSS output.
+// @import 'settings/*';
+// All SASS mixins and functions goes here.
+// No CSS output.
+// @import 'tools/*';
+// Reset and/or normalize styles, box-sizing definition, etc.
+// This is the first layer which outputs CSS.
+@import 'generic/*'; // Styling for bare HTML elements (like H1, A, etc.).
+// Used only for generic browser overrides.
+// @import 'elements/*';
+// Class-based selectors which define undecorated design patterns,
+// for example media object known from OOCSS.
+// @import 'objects/*';
+// Specific UI components (this is where the majority of the styles takes place).
+// UI components are often composed of Objects and Components.
+// @import 'components/*';
+// Theme overrides
+// @import 'theme/*';
+// Utilities and helper classes with ability to override anything that comes before.
+// These classes should be named starting with an underscore (eg. ._hide).
+// and usually uses !important in their attributes.
+// @import 'trumps/*';
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+
+  body {
+    margin: 30px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+
+    .compass {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 20px auto;
+      background: #fff;
+      /* padding: 20px; */
+      overflow: hidden;
+
+      .disc {
+        position: absolute;
+        top: 40px;
+        z-index: 200;
+        background: url("https://s3-eu-west-1.amazonaws.com/mbkassets/dev/compass.png");
+        width: 200px;
+        height: 200px;
+        background-size: 100%;
+        left: 50%;
+        margin-left: -100px;
+      }
+
+      .arrow {
+        position: absolute;
+        top: 45px;
+        padding-left: 5px;
+        z-index: 1000;
+        background: url("https://s3-eu-west-1.amazonaws.com/mbkassets/dev/arrow.svg");
+        width: 200px;
+        height: 200px;
+        background-size: 100%;
+        z-index: 99999;
+        left: 50%;
+        margin-left: -100px;
+      }
+    }
+  }
+}
